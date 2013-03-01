@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+  <definition name="default" template="/WEB-INF/layouts/default.jspx">
+    <put-attribute name="header" value="/WEB-INF/views/header.jspx" />
+        <put-attribute name="menu" value="/WEB-INF/views/menu.jspx" />
+    <put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
+  </definition>
+
+  <definition name="public" template="/WEB-INF/layouts/default.jspx">
+    <put-attribute name="header" value="/WEB-INF/views/header.jspx" />
+    <put-attribute name="actividadesRecientes" value="/WEB-INF/views/ActividadesRecientes.jspx" />
+    <put-attribute name="opcionesHomePage" value="/WEB-INF/views/OpcionesHomePage.jspx" />
+    <put-attribute name="chatFacebook" value="/WEB-INF/views/ChatFacebook.jspx" />
+    <put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
+  </definition>
+  
+  <definition name="fichaTorneoVista" template="/WEB-INF/layouts/fichaTorneo.jspx">
+    <put-attribute name="header" value="/WEB-INF/views/header.jspx" />
+    <put-attribute name="trazaNavegacion" value="/WEB-INF/views/fichaTorneo/trazaNavegacion.jspx" />
+    <put-attribute name="tituloTorneo" value="/WEB-INF/views/fichaTorneo/tituloTorneo.jspx" />
+    <put-attribute name="opcionesFichaTorneo" value="/WEB-INF/views/fichaTorneo/opcionesFichaTorneo.jspx" />
+    <put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
+  </definition>
+
+</tiles-definitions>

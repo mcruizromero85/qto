@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_qto_web_domain_Tournament" items="${tournaments}" z="rGf/Ig2AIVHDqwO/x2N7/LZBlN8=">
+        <table:table data="${tournaments}" id="l_com_qto_web_domain_Tournament" path="/tournaments" z="FQpMWoBLZUBkbLzA+FqsKZCMal4=">
+            <table:column id="c_com_qto_web_domain_Tournament_title" property="title" z="AZa7ylRo0F9Mpe2BdjYkp4THuGA="/>
+            <table:column id="c_com_qto_web_domain_Tournament_description" property="description" z="l8FawFUdd9KftNNGuHl8MuPK/MA="/>
+            <table:column id="c_com_qto_web_domain_Tournament_urlLogo" property="urlLogo" z="aHbxEphzuOtqkCzHVepiiQv5LNU="/>
+            <table:column calendar="true" dateTimePattern="${tournament_confirm_date_format}" id="c_com_qto_web_domain_Tournament_confirm" property="confirm" z="IEqOax00006f6pv+P1p0S5gECNU="/>
+            <table:column calendar="true" dateTimePattern="${tournament_init_date_format}" id="c_com_qto_web_domain_Tournament_init" property="init" z="Hypk5y5zH1bGcwJ3F9hYzGat/18="/>
+            <table:column id="c_com_qto_web_domain_Tournament_modality" property="modality" z="ImzduIeMaEMj/6UdWiovHRrB8KQ="/>
+        </table:table>
+    </page:list>
+</div>

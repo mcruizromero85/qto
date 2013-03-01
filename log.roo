@@ -1,0 +1,24 @@
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-12-30 23:42:33
+project --topLevelPackage com.qto.web
+jpa setup --provider HIBERNATE --database MYSQL --databaseName qto --userName root --password password --hostName localhost 
+entity jpa --class com.qto.web.domain.gamer
+field string --fieldName nick --sizeMin 6 --sizeMax 15 --notNull
+field email template --fieldName email
+entity jpa --class com.qto.web.domain.Tournament
+// [failed] field string --fieldName title --notNull --sizeMin 15 --sizeMax 50
+field string --fieldName description --notNull --sizeMin 50 --sizeMax 200
+field string --fieldName urlLogo --comment "Url para el logo"
+field date --fieldName confirm --type java.util.Calendar --dateTimeFormatPattern "dd/MM/yyyy HH:mm:ss" --notNull
+field date --fieldName init --type java.util.Calendar --dateTimeFormatPattern "dd/MM/yyyy HH:mm:ss" --notNull
+field string --fieldName modality --notNull --regexp "gb|g|b"
+field string --fieldName game --notNull --regexp "Starcraft2|WarcraftDota|HoN|LoL|Dota2|CounterStrike"
+field reference --fieldName organizador --type ~.domain.Gamer --cardinality MANY_TO_ONE --joinColumnName id_gamer
+entity jpa --class com.qto.web.domain.enrollment
+field reference --fieldName competitor --type ~.domain.Gamer --cardinality MANY_TO_ONE --joinColumnName id_gamer
+field reference --fieldName tournament --type ~.domain.Tournament --cardinality MANY_TO_ONE --joinColumnName id_tournament
+web mvc setup
+web mvc all --package com.qto.web.controllers
+web mvc install language --code es
+hint 
+hint eclipse
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2013-03-01 17:44:47

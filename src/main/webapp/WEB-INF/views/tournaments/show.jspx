@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_qto_web_domain_Tournament" object="${tournament}" path="/tournaments" z="+oIfFoBvHrhntH4GGkz9fGqTzl0=">
+        <field:display field="title" id="s_com_qto_web_domain_Tournament_title" object="${tournament}" z="RHd7rRastvMzvElhfnzkKYocrsM="/>
+        <field:display field="description" id="s_com_qto_web_domain_Tournament_description" object="${tournament}" z="eP/J0nvBamiC0CYzEkJwCY0guGY="/>
+        <field:display field="urlLogo" id="s_com_qto_web_domain_Tournament_urlLogo" object="${tournament}" z="/KDOqU4AjhWj2FfYCqF7dFUnUmY="/>
+        <field:display calendar="true" dateTimePattern="${tournament_confirm_date_format}" field="confirm" id="s_com_qto_web_domain_Tournament_confirm" object="${tournament}" z="8CfXCYhQp6MCEsR69uT04N5r+gk="/>
+        <field:display calendar="true" dateTimePattern="${tournament_init_date_format}" field="init" id="s_com_qto_web_domain_Tournament_init" object="${tournament}" z="8z5pgyNcBE52Y38Fhm2gITiL9/k="/>
+        <field:display field="modality" id="s_com_qto_web_domain_Tournament_modality" object="${tournament}" z="q4pOBXlYgSk/Grrz3qbPvEinYmI="/>
+        <field:display field="game" id="s_com_qto_web_domain_Tournament_game" object="${tournament}" z="DcRXzW2xheV7jcnSUTxMiZxvlT4="/>
+        <field:display field="organizador" id="s_com_qto_web_domain_Tournament_organizador" object="${tournament}" z="FkviHipqskTULRrbgph/q0oj0wc="/>
+    </page:show>
+</div>

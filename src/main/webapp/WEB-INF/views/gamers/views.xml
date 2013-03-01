@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="gamers/list">
+        <put-attribute name="body" value="/WEB-INF/views/gamers/list.jspx"/>
+    </definition>
+<definition extends="default" name="gamers/show">
+        <put-attribute name="body" value="/WEB-INF/views/gamers/show.jspx"/>
+    </definition>
+<definition extends="default" name="gamers/create">
+        <put-attribute name="body" value="/WEB-INF/views/gamers/create.jspx"/>
+    </definition>
+<definition extends="default" name="gamers/update">
+        <put-attribute name="body" value="/WEB-INF/views/gamers/update.jspx"/>
+    </definition>
+</tiles-definitions>

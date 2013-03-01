@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_qto_web_domain_Enrollment" object="${enrollment}" path="/enrollments" z="UVsnL8eFQ5GOTKiAgGFlhf4c/is=">
+        <field:display field="competitor" id="s_com_qto_web_domain_Enrollment_competitor" object="${enrollment}" z="aBetS12hELKfAiEi9X9n+Eba8nA="/>
+        <field:display field="tournament" id="s_com_qto_web_domain_Enrollment_tournament" object="${enrollment}" z="AvNPFY2svj5/1t5lzK0VGCp/wrc="/>
+        <field:display calendar="true" dateTimePattern="${enrollment_registrationdate_date_format}" field="registrationDate" id="s_com_qto_web_domain_Enrollment_registrationDate" object="${enrollment}" z="Fy1vh4mrut5nnIl7STL2RYnJO9c="/>
+    </page:show>
+</div>

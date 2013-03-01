@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_enrollment" z="pBJATvAlLiOiggNODQe+TVQwgs4=">
+            <menu:item id="i_enrollment_new" messageCode="global_menu_new" url="/enrollments?form" z="g5HeLZsk9q1EbbJknGbCtoOOIA0="/>
+            <menu:item id="i_enrollment_list" messageCode="global_menu_list" url="/enrollments?page=1&amp;size=${empty param.size ? 10 : param.size}" z="HtTM7hEK6StCgrubdxO772HWDn4="/>
+        </menu:category>
+        <menu:category id="c_tournament" z="O153KWsz5+ehhWQVu4oNV+WzXOg=">
+            <menu:item id="i_tournament_new" messageCode="global_menu_new" url="/tournaments?form" z="ngre1v2H6XC2e94sow0M7ex/GK4="/>
+            <menu:item id="i_tournament_list" messageCode="global_menu_list" url="/tournaments?page=1&amp;size=${empty param.size ? 10 : param.size}" z="NzJ/E4jaYw83M2BjvfcjEDjcMG8="/>
+        </menu:category>
+        <menu:category id="c_gamer" z="wAtBkl2ow2cGFgeQAocKwc3Ul5w=">
+            <menu:item id="i_gamer_new" messageCode="global_menu_new" url="/gamers?form" z="Rp5Zy2ptWyedXPLr1JAV8KYv/VI="/>
+            <menu:item id="i_gamer_list" messageCode="global_menu_list" url="/gamers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="UIR9Z8aiK0uv1H9UaZLJpaGhJXo="/>
+        </menu:category>
+    </menu:menu>
+</div>

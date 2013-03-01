@@ -1,0 +1,52 @@
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<div id="cuadroInscripcionesPortada" >
+  <jsp:directive.page contentType="text/html;charset=UTF-8" />
+  
+  
+  <table>
+  	<tr>
+  		<td >
+  			<div class="divsConBorde">Confirmacion en: <fmt:formatDate type="both" timeStyle="short" dateStyle="short" value="${tournament.confirm.time}"/></div>
+  		</td>
+  		<td>	
+  			<div class="divsConBorde">Inicio en: <fmt:formatDate type="both" timeStyle="short" dateStyle="short" value="${tournament.init.time}"/></div>
+  		</td>
+  	</tr>
+  	<tr>	
+  		<td colspan="2">
+  			<div style="text-align: center;" >
+  				Inscritos
+  			</div>
+  		</td>
+  	</tr>
+  	<tr>
+  		<td>
+		 	<div class="divsConBorde" >
+		 		<table>
+		 			<tr>
+		 				<th>Participante</th>
+		 				<th>Cuando se inscribió</th>
+		 				<th>Wins</th>
+		 				<th>Máximo Logro</th>
+		 				<th>Participaciones en torneos similares</th>
+		 			</tr>
+		 			<c:forEach var="inscripcion" items="${inscripciones}" >
+			 			<tr>
+			 				<td>${inscripcion.gamer.nick }</td>
+			 				<td></td>
+			 				<td></td>
+			 				<td></td>
+			 				<td></td>
+			 			</tr>
+		 			
+		 			</c:forEach>
+		 		</table> 
+		 	</div>
+		 	
+  		</td>
+  	</tr>
+  
+  </table>
+  
+</div>
+</jsp:root>
