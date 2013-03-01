@@ -1,0 +1,118 @@
+-- MySQL dump 10.13  Distrib 5.1.63, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: qto
+-- ------------------------------------------------------
+-- Server version	5.1.63-0ubuntu0.11.10.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `enrollment`
+--
+
+DROP TABLE IF EXISTS `enrollment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `enrollment` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `registration_date` datetime NOT NULL,
+  `version` int(11) DEFAULT NULL,
+  `id_gamer` bigint(20) DEFAULT NULL,
+  `id_tournament` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK6EB63046F5DA8F7` (`id_tournament`),
+  KEY `FK6EB63044CA40D3B` (`id_gamer`),
+  CONSTRAINT `FK6EB63044CA40D3B` FOREIGN KEY (`id_gamer`) REFERENCES `gamer` (`id`),
+  CONSTRAINT `FK6EB63046F5DA8F7` FOREIGN KEY (`id_tournament`) REFERENCES `tournament` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=175 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `enrollment`
+--
+
+LOCK TABLES `enrollment` WRITE;
+/*!40000 ALTER TABLE `enrollment` DISABLE KEYS */;
+INSERT INTO `enrollment` VALUES (1,'2012-12-30 11:16:40',0,2,1),(2,'2012-12-30 11:16:40',0,3,1),(3,'2012-12-30 11:16:40',0,4,1),(4,'2012-12-30 11:16:40',0,5,1),(5,'2012-12-30 11:16:40',0,6,1),(6,'2012-12-30 11:16:40',0,7,1),(7,'2012-12-30 11:16:40',0,8,1),(8,'2012-12-30 11:16:40',0,9,1),(9,'2012-12-30 11:16:40',0,10,1),(10,'2012-12-30 11:16:40',0,11,1),(11,'2012-12-30 11:16:40',0,12,1),(12,'2012-12-30 11:16:40',0,13,1),(13,'2012-12-30 11:16:40',0,14,1),(14,'2012-12-30 11:16:40',0,15,1),(15,'2012-12-30 11:16:40',0,16,1),(16,'2012-12-30 11:16:40',0,17,1),(17,'2012-12-30 11:16:40',0,18,1),(18,'2012-12-30 11:16:40',0,19,1),(19,'2012-12-30 11:16:40',0,20,1),(20,'2012-12-30 11:16:40',0,21,1),(21,'2012-12-30 11:16:40',0,22,1),(22,'2012-12-30 11:16:40',0,23,1),(23,'2012-12-30 11:16:40',0,24,1),(24,'2012-12-30 11:16:40',0,25,1),(25,'2012-12-30 11:16:40',0,26,1),(26,'2012-12-30 11:16:40',0,27,1),(27,'2012-12-30 11:16:40',0,28,1),(28,'2012-12-30 11:16:40',0,29,1),(29,'2012-12-30 11:16:40',0,30,1),(30,'2012-12-30 11:16:40',0,32,2),(31,'2012-12-30 11:16:40',0,33,2),(32,'2012-12-30 11:16:40',0,34,2),(33,'2012-12-30 11:16:40',0,35,2),(34,'2012-12-30 11:16:40',0,36,2),(35,'2012-12-30 11:16:40',0,37,2),(36,'2012-12-30 11:16:40',0,38,2),(37,'2012-12-30 11:16:40',0,39,2),(38,'2012-12-30 11:16:40',0,40,2),(39,'2012-12-30 11:16:40',0,41,2),(40,'2012-12-30 11:16:40',0,42,2),(41,'2012-12-30 11:16:40',0,43,2),(42,'2012-12-30 11:16:40',0,44,2),(43,'2012-12-30 11:16:40',0,45,2),(44,'2012-12-30 11:16:40',0,46,2),(45,'2012-12-30 11:16:40',0,47,2),(46,'2012-12-30 11:16:40',0,48,2),(47,'2012-12-30 11:16:40',0,49,2),(48,'2012-12-30 11:16:40',0,50,2),(49,'2012-12-30 11:16:40',0,51,2),(50,'2012-12-30 11:16:40',0,52,2),(51,'2012-12-30 11:16:40',0,53,2),(52,'2012-12-30 11:16:40',0,54,2),(53,'2012-12-30 11:16:40',0,55,2),(54,'2012-12-30 11:16:40',0,56,2),(55,'2012-12-30 11:16:40',0,57,2),(56,'2012-12-30 11:16:40',0,58,2),(57,'2012-12-30 11:16:40',0,59,2),(58,'2012-12-30 11:16:40',0,60,2),(59,'2012-12-30 11:16:40',0,62,3),(60,'2012-12-30 11:16:40',0,63,3),(61,'2012-12-30 11:16:40',0,64,3),(62,'2012-12-30 11:16:40',0,65,3),(63,'2012-12-30 11:16:40',0,66,3),(64,'2012-12-30 11:16:40',0,67,3),(65,'2012-12-30 11:16:40',0,68,3),(66,'2012-12-30 11:16:40',0,69,3),(67,'2012-12-30 11:16:40',0,70,3),(68,'2012-12-30 11:16:40',0,71,3),(69,'2012-12-30 11:16:40',0,72,3),(70,'2012-12-30 11:16:40',0,73,3),(71,'2012-12-30 11:16:40',0,74,3),(72,'2012-12-30 11:16:40',0,75,3),(73,'2012-12-30 11:16:40',0,76,3),(74,'2012-12-30 11:16:40',0,77,3),(75,'2012-12-30 11:16:40',0,78,3),(76,'2012-12-30 11:16:40',0,79,3),(77,'2012-12-30 11:16:40',0,80,3),(78,'2012-12-30 11:16:40',0,81,3),(79,'2012-12-30 11:16:40',0,82,3),(80,'2012-12-30 11:16:40',0,83,3),(81,'2012-12-30 11:16:40',0,84,3),(82,'2012-12-30 11:16:40',0,85,3),(83,'2012-12-30 11:16:40',0,86,3),(84,'2012-12-30 11:16:41',0,87,3),(85,'2012-12-30 11:16:41',0,88,3),(86,'2012-12-30 11:16:41',0,89,3),(87,'2012-12-30 11:16:41',0,90,3),(88,'2012-12-30 11:16:41',0,92,4),(89,'2012-12-30 11:16:41',0,93,4),(90,'2012-12-30 11:16:41',0,94,4),(91,'2012-12-30 11:16:41',0,95,4),(92,'2012-12-30 11:16:41',0,96,4),(93,'2012-12-30 11:16:41',0,97,4),(94,'2012-12-30 11:16:41',0,98,4),(95,'2012-12-30 11:16:41',0,99,4),(96,'2012-12-30 11:16:41',0,100,4),(97,'2012-12-30 11:16:41',0,101,4),(98,'2012-12-30 11:16:41',0,102,4),(99,'2012-12-30 11:16:41',0,103,4),(100,'2012-12-30 11:16:41',0,104,4),(101,'2012-12-30 11:16:41',0,105,4),(102,'2012-12-30 11:16:41',0,106,4),(103,'2012-12-30 11:16:41',0,107,4),(104,'2012-12-30 11:16:41',0,108,4),(105,'2012-12-30 11:16:41',0,109,4),(106,'2012-12-30 11:16:41',0,110,4),(107,'2012-12-30 11:16:41',0,111,4),(108,'2012-12-30 11:16:41',0,112,4),(109,'2012-12-30 11:16:41',0,113,4),(110,'2012-12-30 11:16:41',0,114,4),(111,'2012-12-30 11:16:41',0,115,4),(112,'2012-12-30 11:16:41',0,116,4),(113,'2012-12-30 11:16:41',0,117,4),(114,'2012-12-30 11:16:41',0,118,4),(115,'2012-12-30 11:16:41',0,119,4),(116,'2012-12-30 11:16:41',0,120,4),(117,'2012-12-30 11:16:41',0,122,5),(118,'2012-12-30 11:16:41',0,123,5),(119,'2012-12-30 11:16:41',0,124,5),(120,'2012-12-30 11:16:41',0,125,5),(121,'2012-12-30 11:16:41',0,126,5),(122,'2012-12-30 11:16:41',0,127,5),(123,'2012-12-30 11:16:41',0,128,5),(124,'2012-12-30 11:16:41',0,129,5),(125,'2012-12-30 11:16:41',0,130,5),(126,'2012-12-30 11:16:41',0,131,5),(127,'2012-12-30 11:16:41',0,132,5),(128,'2012-12-30 11:16:41',0,133,5),(129,'2012-12-30 11:16:41',0,134,5),(130,'2012-12-30 11:16:41',0,135,5),(131,'2012-12-30 11:16:41',0,136,5),(132,'2012-12-30 11:16:41',0,137,5),(133,'2012-12-30 11:16:41',0,138,5),(134,'2012-12-30 11:16:41',0,139,5),(135,'2012-12-30 11:16:41',0,140,5),(136,'2012-12-30 11:16:41',0,141,5),(137,'2012-12-30 11:16:41',0,142,5),(138,'2012-12-30 11:16:41',0,143,5),(139,'2012-12-30 11:16:41',0,144,5),(140,'2012-12-30 11:16:41',0,145,5),(141,'2012-12-30 11:16:41',0,146,5),(142,'2012-12-30 11:16:41',0,147,5),(143,'2012-12-30 11:16:41',0,148,5),(144,'2012-12-30 11:16:41',0,149,5),(145,'2012-12-30 11:16:41',0,150,5),(146,'2012-12-30 11:16:41',0,152,6),(147,'2012-12-30 11:16:41',0,153,6),(148,'2012-12-30 11:16:41',0,154,6),(149,'2012-12-30 11:16:41',0,155,6),(150,'2012-12-30 11:16:41',0,156,6),(151,'2012-12-30 11:16:41',0,157,6),(152,'2012-12-30 11:16:41',0,158,6),(153,'2012-12-30 11:16:41',0,159,6),(154,'2012-12-30 11:16:41',0,160,6),(155,'2012-12-30 11:16:41',0,161,6),(156,'2012-12-30 11:16:41',0,162,6),(157,'2012-12-30 11:16:41',0,163,6),(158,'2012-12-30 11:16:41',0,164,6),(159,'2012-12-30 11:16:41',0,165,6),(160,'2012-12-30 11:16:41',0,166,6),(161,'2012-12-30 11:16:41',0,167,6),(162,'2012-12-30 11:16:41',0,168,6),(163,'2012-12-30 11:16:41',0,169,6),(164,'2012-12-30 11:16:41',0,170,6),(165,'2012-12-30 11:16:41',0,171,6),(166,'2012-12-30 11:16:41',0,172,6),(167,'2012-12-30 11:16:41',0,173,6),(168,'2012-12-30 11:16:41',0,174,6),(169,'2012-12-30 11:16:41',0,175,6),(170,'2012-12-30 11:16:41',0,176,6),(171,'2012-12-30 11:16:41',0,177,6),(172,'2012-12-30 11:16:41',0,178,6),(173,'2012-12-30 11:16:41',0,179,6),(174,'2012-12-30 11:16:41',0,180,6);
+/*!40000 ALTER TABLE `enrollment` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `gamer`
+--
+
+DROP TABLE IF EXISTS `gamer`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `gamer` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `email` varchar(120) NOT NULL,
+  `nick` varchar(15) NOT NULL,
+  `version` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=181 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gamer`
+--
+
+LOCK TABLES `gamer` WRITE;
+/*!40000 ALTER TABLE `gamer` DISABLE KEYS */;
+INSERT INTO `gamer` VALUES (1,'devil@gmail.com','devil',0),(2,'velardefranklin@hotmail.com','sidvicius',0),(3,'otaru_50@hotmail.com','otaru',0),(4,'carlossssno@gmail.com','locopiedra',0),(5,'bruc3fulus@gmail.com','brucefulus',0),(6,'aGPizzaBoy@hotmail.com','aG´PizzaBoy',0),(7,'alle.368@gmail.com','alle.368',0),(8,'AnGDemolex@yahoo.com','AnGDemolex',0),(9,'arshydra@hotmail.com','ars][hydra',0),(10,'ArtillerY@hotmail.com','ArtillerY',0),(11,'bellomo@gmail.com','bellomo',0),(12,'berserkci@hotmail.com','berserkci',0),(13,'diseL@yahoo.com','diseL',0),(14,'DreamR@hotmail.com','DreamR',0),(15,'Duja@gmail.com','Duja',0),(16,'EndrylFox@hotmail.com','EndrylFox',0),(17,'FoWEmperoR@hotmail.com','FoWEmperoR',0),(18,'goZ@hotmail.com','goZ',0),(19,'ImAdanRz@yahoo.com','ImAdanRz',0),(20,'Infestedpee@hotmail.com','Infestedpee',0),(21,'Karliz@gmail.com','Karliz',0),(22,'Moist@gmail.com','Moist',0),(23,'MultiTouch@hotmail.com','MultiTouch',0),(24,'przewoz@hotmail.com','przewoz',0),(25,'psyco@yahoo.com','psyco',0),(26,'QPZergRush@hotmail.com','QP|ZergRush',0),(27,'RamaRamirez@hotmail.com','Rama Ramirez',0),(28,'Seax.439@gmail.com','Seax.439',0),(29,'SevReal@yahoo.com','SevReal',0),(30,'shiyar@yahoo.com','shiyar',0),(31,'devil@gmail.com','devil',0),(32,'velardefranklin@hotmail.com','sidvicius',0),(33,'otaru_50@hotmail.com','otaru',0),(34,'carlossssno@gmail.com','locopiedra',0),(35,'bruc3fulus@gmail.com','brucefulus',0),(36,'aGPizzaBoy@hotmail.com','aG´PizzaBoy',0),(37,'alle.368@gmail.com','alle.368',0),(38,'AnGDemolex@yahoo.com','AnGDemolex',0),(39,'arshydra@hotmail.com','ars][hydra',0),(40,'ArtillerY@hotmail.com','ArtillerY',0),(41,'bellomo@gmail.com','bellomo',0),(42,'berserkci@hotmail.com','berserkci',0),(43,'diseL@yahoo.com','diseL',0),(44,'DreamR@hotmail.com','DreamR',0),(45,'Duja@gmail.com','Duja',0),(46,'EndrylFox@hotmail.com','EndrylFox',0),(47,'FoWEmperoR@hotmail.com','FoWEmperoR',0),(48,'goZ@hotmail.com','goZ',0),(49,'ImAdanRz@yahoo.com','ImAdanRz',0),(50,'Infestedpee@hotmail.com','Infestedpee',0),(51,'Karliz@gmail.com','Karliz',0),(52,'Moist@gmail.com','Moist',0),(53,'MultiTouch@hotmail.com','MultiTouch',0),(54,'przewoz@hotmail.com','przewoz',0),(55,'psyco@yahoo.com','psyco',0),(56,'QPZergRush@hotmail.com','QP|ZergRush',0),(57,'RamaRamirez@hotmail.com','Rama Ramirez',0),(58,'Seax.439@gmail.com','Seax.439',0),(59,'SevReal@yahoo.com','SevReal',0),(60,'shiyar@yahoo.com','shiyar',0),(61,'devil@gmail.com','devil',0),(62,'velardefranklin@hotmail.com','sidvicius',0),(63,'otaru_50@hotmail.com','otaru',0),(64,'carlossssno@gmail.com','locopiedra',0),(65,'bruc3fulus@gmail.com','brucefulus',0),(66,'aGPizzaBoy@hotmail.com','aG´PizzaBoy',0),(67,'alle.368@gmail.com','alle.368',0),(68,'AnGDemolex@yahoo.com','AnGDemolex',0),(69,'arshydra@hotmail.com','ars][hydra',0),(70,'ArtillerY@hotmail.com','ArtillerY',0),(71,'bellomo@gmail.com','bellomo',0),(72,'berserkci@hotmail.com','berserkci',0),(73,'diseL@yahoo.com','diseL',0),(74,'DreamR@hotmail.com','DreamR',0),(75,'Duja@gmail.com','Duja',0),(76,'EndrylFox@hotmail.com','EndrylFox',0),(77,'FoWEmperoR@hotmail.com','FoWEmperoR',0),(78,'goZ@hotmail.com','goZ',0),(79,'ImAdanRz@yahoo.com','ImAdanRz',0),(80,'Infestedpee@hotmail.com','Infestedpee',0),(81,'Karliz@gmail.com','Karliz',0),(82,'Moist@gmail.com','Moist',0),(83,'MultiTouch@hotmail.com','MultiTouch',0),(84,'przewoz@hotmail.com','przewoz',0),(85,'psyco@yahoo.com','psyco',0),(86,'QPZergRush@hotmail.com','QP|ZergRush',0),(87,'RamaRamirez@hotmail.com','Rama Ramirez',0),(88,'Seax.439@gmail.com','Seax.439',0),(89,'SevReal@yahoo.com','SevReal',0),(90,'shiyar@yahoo.com','shiyar',0),(91,'devil@gmail.com','devil',0),(92,'velardefranklin@hotmail.com','sidvicius',0),(93,'otaru_50@hotmail.com','otaru',0),(94,'carlossssno@gmail.com','locopiedra',0),(95,'bruc3fulus@gmail.com','brucefulus',0),(96,'aGPizzaBoy@hotmail.com','aG´PizzaBoy',0),(97,'alle.368@gmail.com','alle.368',0),(98,'AnGDemolex@yahoo.com','AnGDemolex',0),(99,'arshydra@hotmail.com','ars][hydra',0),(100,'ArtillerY@hotmail.com','ArtillerY',0),(101,'bellomo@gmail.com','bellomo',0),(102,'berserkci@hotmail.com','berserkci',0),(103,'diseL@yahoo.com','diseL',0),(104,'DreamR@hotmail.com','DreamR',0),(105,'Duja@gmail.com','Duja',0),(106,'EndrylFox@hotmail.com','EndrylFox',0),(107,'FoWEmperoR@hotmail.com','FoWEmperoR',0),(108,'goZ@hotmail.com','goZ',0),(109,'ImAdanRz@yahoo.com','ImAdanRz',0),(110,'Infestedpee@hotmail.com','Infestedpee',0),(111,'Karliz@gmail.com','Karliz',0),(112,'Moist@gmail.com','Moist',0),(113,'MultiTouch@hotmail.com','MultiTouch',0),(114,'przewoz@hotmail.com','przewoz',0),(115,'psyco@yahoo.com','psyco',0),(116,'QPZergRush@hotmail.com','QP|ZergRush',0),(117,'RamaRamirez@hotmail.com','Rama Ramirez',0),(118,'Seax.439@gmail.com','Seax.439',0),(119,'SevReal@yahoo.com','SevReal',0),(120,'shiyar@yahoo.com','shiyar',0),(121,'devil@gmail.com','devil',0),(122,'velardefranklin@hotmail.com','sidvicius',0),(123,'otaru_50@hotmail.com','otaru',0),(124,'carlossssno@gmail.com','locopiedra',0),(125,'bruc3fulus@gmail.com','brucefulus',0),(126,'aGPizzaBoy@hotmail.com','aG´PizzaBoy',0),(127,'alle.368@gmail.com','alle.368',0),(128,'AnGDemolex@yahoo.com','AnGDemolex',0),(129,'arshydra@hotmail.com','ars][hydra',0),(130,'ArtillerY@hotmail.com','ArtillerY',0),(131,'bellomo@gmail.com','bellomo',0),(132,'berserkci@hotmail.com','berserkci',0),(133,'diseL@yahoo.com','diseL',0),(134,'DreamR@hotmail.com','DreamR',0),(135,'Duja@gmail.com','Duja',0),(136,'EndrylFox@hotmail.com','EndrylFox',0),(137,'FoWEmperoR@hotmail.com','FoWEmperoR',0),(138,'goZ@hotmail.com','goZ',0),(139,'ImAdanRz@yahoo.com','ImAdanRz',0),(140,'Infestedpee@hotmail.com','Infestedpee',0),(141,'Karliz@gmail.com','Karliz',0),(142,'Moist@gmail.com','Moist',0),(143,'MultiTouch@hotmail.com','MultiTouch',0),(144,'przewoz@hotmail.com','przewoz',0),(145,'psyco@yahoo.com','psyco',0),(146,'QPZergRush@hotmail.com','QP|ZergRush',0),(147,'RamaRamirez@hotmail.com','Rama Ramirez',0),(148,'Seax.439@gmail.com','Seax.439',0),(149,'SevReal@yahoo.com','SevReal',0),(150,'shiyar@yahoo.com','shiyar',0),(151,'devil@gmail.com','devil',0),(152,'velardefranklin@hotmail.com','sidvicius',0),(153,'otaru_50@hotmail.com','otaru',0),(154,'carlossssno@gmail.com','locopiedra',0),(155,'bruc3fulus@gmail.com','brucefulus',0),(156,'aGPizzaBoy@hotmail.com','aG´PizzaBoy',0),(157,'alle.368@gmail.com','alle.368',0),(158,'AnGDemolex@yahoo.com','AnGDemolex',0),(159,'arshydra@hotmail.com','ars][hydra',0),(160,'ArtillerY@hotmail.com','ArtillerY',0),(161,'bellomo@gmail.com','bellomo',0),(162,'berserkci@hotmail.com','berserkci',0),(163,'diseL@yahoo.com','diseL',0),(164,'DreamR@hotmail.com','DreamR',0),(165,'Duja@gmail.com','Duja',0),(166,'EndrylFox@hotmail.com','EndrylFox',0),(167,'FoWEmperoR@hotmail.com','FoWEmperoR',0),(168,'goZ@hotmail.com','goZ',0),(169,'ImAdanRz@yahoo.com','ImAdanRz',0),(170,'Infestedpee@hotmail.com','Infestedpee',0),(171,'Karliz@gmail.com','Karliz',0),(172,'Moist@gmail.com','Moist',0),(173,'MultiTouch@hotmail.com','MultiTouch',0),(174,'przewoz@hotmail.com','przewoz',0),(175,'psyco@yahoo.com','psyco',0),(176,'QPZergRush@hotmail.com','QP|ZergRush',0),(177,'RamaRamirez@hotmail.com','Rama Ramirez',0),(178,'Seax.439@gmail.com','Seax.439',0),(179,'SevReal@yahoo.com','SevReal',0),(180,'shiyar@yahoo.com','shiyar',0);
+/*!40000 ALTER TABLE `gamer` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tournament`
+--
+
+DROP TABLE IF EXISTS `tournament`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tournament` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `confirm` datetime NOT NULL,
+  `description` varchar(200) NOT NULL,
+  `game` varchar(255) NOT NULL,
+  `init` datetime NOT NULL,
+  `modality` varchar(255) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `url_logo` varchar(255) DEFAULT NULL,
+  `version` int(11) DEFAULT NULL,
+  `id_gamer` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKC4A259E94CA40D3B` (`id_gamer`),
+  CONSTRAINT `FKC4A259E94CA40D3B` FOREIGN KEY (`id_gamer`) REFERENCES `gamer` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tournament`
+--
+
+LOCK TABLES `tournament` WRITE;
+/*!40000 ALTER TABLE `tournament` DISABLE KEYS */;
+INSERT INTO `tournament` VALUES (1,'2012-12-30 11:16:39',' Bloodzone por sus 5 años de creación organiza un torneo starcraft 2 para sus miembros con fabulosos premios para todas las rondas','Starcraft2','2012-12-30 11:16:39','b','Torneo Bloodzone Starcraft 2',NULL,0,1),(2,'2012-12-30 11:16:40',' Bloodzone por sus 5 años de creación organiza un torneo dota para sus miembros con fabulosos premios para todas las rondas','WarcraftDota','2012-12-30 11:16:40','b','Torneo Bloodzone Dota',NULL,0,31),(3,'2012-12-30 11:16:40',' Bloodzone por sus 5 años de creación organiza un torneo de Heroes of Newerth para sus miembros con fabulosos premios para todas las rondas','HoN','2012-12-30 11:16:40','b','Torneo Bloodzone Heroes of Newerth',NULL,0,61),(4,'2012-12-30 11:16:41',' Bloodzone por sus 5 años de creación organiza un torneo de League of Legends para sus miembros con fabulosos premios para todas las rondas','LoL','2012-12-30 11:16:41','b','Torneo Bloodzone League of Legends',NULL,0,91),(5,'2012-12-30 11:16:41',' Bloodzone por sus 5 años de creación organiza un torneo de Dota2 para sus miembros con fabulosos premios para todas las rondas','Dota2','2012-12-30 11:16:41','b','Torneo Bloodzone Dota2',NULL,0,121),(6,'2012-12-30 11:16:41',' Bloodzone por sus 5 años de creación organiza un torneo de Counter-Strike para sus miembros con fabulosos premios para todas las rondas','CounterStrike','2012-12-30 11:16:41','b','Torneo Bloodzone Counter Strike',NULL,0,151);
+/*!40000 ALTER TABLE `tournament` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2012-12-30 12:55:50
