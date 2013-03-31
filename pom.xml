@@ -10,7 +10,7 @@
         <aspectj.version>1.6.12</aspectj.version>
         <java.version>1.6</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <roo.version>1.2.1.RELEASE</roo.version>
+        <roo.version>1.2.2.RELEASE</roo.version>
         <slf4j.version>1.6.4</slf4j.version>
         <spring.version>3.1.0.RELEASE</spring.version>
     </properties>
@@ -295,8 +295,16 @@
             <artifactId>tiles-jsp</artifactId>
             <version>2.2.2</version>
         </dependency>
+        
+        <dependency>
+            <groupId>org.jbehave.web</groupId>
+            <artifactId>jbehave-web-selenium</artifactId>
+            <version>3.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
+		<finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -429,16 +437,109 @@
                 <artifactId>tomcat-maven-plugin</artifactId>
                 <version>1.1</version>
             </plugin>
-            <plugin>
-                <groupId>org.mortbay.jetty</groupId>
-                <artifactId>jetty-maven-plugin</artifactId>
-                <version>8.0.1.v20110908</version>
-                <configuration>
-                    <webAppConfig>
-                        <contextPath>/${project.name}</contextPath>
-                    </webAppConfig>
-                </configuration>
-            </plugin>
+<plugin>
+	                <groupId>org.mortbay.jetty</groupId>
+	                <artifactId>maven-jetty-plugin</artifactId>
+	                <version>6.1.26</version>
+	                <configuration>
+	                    <webApp>${project.build.directory}/${project.artifactId}.war</webApp>
+	                    <webAppConfig>
+	                        <contextPath>/${project.artifactId}</contextPath>
+	                    </webAppConfig>
+	                    <connectors>
+            						<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+              						<port>9001</port>
+              						<maxIdleTime>60000</maxIdleTime>
+            						</connector>
+          						</connectors>
+
+			     <requestLog implementation="org.mortbay.jetty.NCSARequestLog">
+			            <filename>target/yyyy_mm_dd.request.log</filename>
+			            <retainDays>90</retainDays>
+			            <append>true</append>
+			            <extended>false</extended>
+			            <logTimeZone>GMT</logTimeZone>
+		          </requestLog>
+	                </configuration>
+	                <executions>
+	                    <execution>
+	                        <id>start-jetty</id>
+	                        <phase>pre-integration-test</phase>
+	                        <goals>
+	                            <goal>run-war</goal>
+	                        </goals>
+	                        <configuration>
+	                            <scanIntervalSeconds>0</scanIntervalSeconds>
+	                            <daemon>true</daemon>
+	                        </configuration>
+	                    </execution>
+	                    <execution>
+	                        <id>stop-jetty</id>
+	                        <phase>post-integration-test</phase>
+	                        <goals>
+	                            <goal>stop</goal>
+	                        </goals>
+	                        <configuration>
+	                            <stopKey>stopJetty</stopKey>
+	                            <stopPort>9966</stopPort>
+	                        </configuration>
+	                    </execution>
+	                </executions>
+	            </plugin>
+	            
+	            	   <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>selenium-maven-plugin</artifactId>
+                        <version>2.3</version>
+                        <executions>
+                            <execution>
+                                <id>start-selenium</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>start-server</goal>
+                                </goals>
+                                <configuration>
+                                    <background>true</background>
+                                    <debug>true</debug>
+                                    <logOutput>true</logOutput>
+                                </configuration>
+                            </execution>
+                        </executions>
+           		</plugin>
+           		
+           		 <plugin>
+                        <groupId>org.jbehave</groupId>
+                        <artifactId>jbehave-maven-plugin</artifactId>
+                        <version>3.0</version>
+                        <executions>
+                            <execution>
+                                <id>run-stories</id>
+                                <phase>integration-test</phase>
+                                <configuration>
+                                    <includes>
+                                        <include>**/*Stories.java</include>
+                                    </includes>
+                                    <scope>test</scope>
+                                </configuration>
+                                <goals>
+                                    <goal>run-stories-as-embeddables</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.jbehave.web</groupId>
+                                <artifactId>jbehave-web-selenium</artifactId>
+                                <version>3.0</version>
+                            </dependency>
+                            <dependency>
+                               <groupId>log4j</groupId>
+                               <artifactId>log4j</artifactId>
+                               <version>1.2.16</version>
+                            </dependency>
+                        </dependencies>
+           		</plugin>
+	            
         </plugins>
     </build>
 </project>

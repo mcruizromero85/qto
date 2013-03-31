@@ -42,7 +42,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Gamer, String> ApplicationConversionServiceFactoryBean.getGamerToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.qto.web.domain.Gamer, java.lang.String>() {
             public String convert(Gamer gamer) {
-                return new StringBuilder().append(gamer.getNick()).append(" ").append(gamer.getEmail()).toString();
+                return new StringBuilder().append(gamer.getNick()).append(' ').append(gamer.getEmail()).toString();
             }
         };
     }
@@ -66,7 +66,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Tournament, String> ApplicationConversionServiceFactoryBean.getTournamentToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.qto.web.domain.Tournament, java.lang.String>() {
             public String convert(Tournament tournament) {
-                return new StringBuilder().append(tournament.getTitle()).append(" ").append(tournament.getDescription()).append(" ").append(tournament.getUrlLogo()).append(" ").append(tournament.getConfirm()).toString();
+                return new StringBuilder().append(tournament.getTitle()).append(' ').append(tournament.getDescription()).append(' ').append(tournament.getUrlLogo()).append(' ').append(tournament.getConfirm()).toString();
             }
         };
     }
