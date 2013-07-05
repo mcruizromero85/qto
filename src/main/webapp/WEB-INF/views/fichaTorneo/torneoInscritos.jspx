@@ -2,7 +2,11 @@
 <div id="cuadroInscripcionesPortada" >
   <jsp:directive.page contentType="text/html;charset=UTF-8" />
   
-  
+  Debes logearte primero
+  Nick: 
+  Password: 
+  <input type="button" name="btnIngresar" value="Ingresar" />
+  Listo!! Ya estas inscrito
   <table>
   	<tr>
   		<td >

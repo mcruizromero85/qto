@@ -1,9 +1,9 @@
 <jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
-<div id="cuadroInscripcionesPortada" >
+<div id="cuadroInscripcionesPortada" style="border-radius: 5px" >
   <jsp:directive.page contentType="text/html;charset=UTF-8" />
   
   	
-  	<table style="border-bottom-style: solid;">
+  	<table class="tablaListado">
   		<tr>
   			<th>Torneo</th>
   			<th>Juego</th>
@@ -17,7 +17,7 @@
 	   		<td>${tournament.game}</td>
 	   		<td> <fmt:formatDate type="both" timeStyle="short" dateStyle="short" value="${tournament.init.time}"/>  </td>
 	   		<td></td>
-	   		<td><a href="fichaTorneo/${tournament.id}">Inscribirme Ya!!!!</a> </td>
+	   		<td><a id="${tournament.game}" href="fichaTorneo/${tournament.id}">Inscribirme Ya!!!!</a> </td>
 	   	</tr>
 	  </c:forEach>
   	</table>

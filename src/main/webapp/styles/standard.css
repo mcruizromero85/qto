@@ -7,23 +7,23 @@ body,div,td {
 }
 
 body {
-	background-color: #fff;
+	background: none repeat scroll 0 0 #000000;	
 	text-align: center;
 }
 
 #header {
-	margin-bottom: 1em;
+
 }
 
 #wrapper {
-	width:800px;
-	min-width: 800px;
-	max-width: 800px;
+	width:900px;
+	min-width: 900px;
+	max-width: 900px;
 	margin-right: auto;
 	margin-left: auto;
 
 	/* fix max-width incompatibility in IE6 */
-	width:expression(document.body.clientWidth > 800? "800px": "auto" );
+	width:expression(document.body.clientWidth > 900? "900px": "auto" );
 	
 	overflow:hidden;
 	display:block;
@@ -34,6 +34,31 @@ body {
 #main {
 	overflow:hidden;
 	display:box;
+}
+
+#actividadesRecientes {
+	padding: 5px;
+	border: 1px solid #CCCCCC;
+	height: 120px; 
+	margin: 15px 0px 15px 0px;	
+	border-radius: 5px;
+}
+
+#chatFacebook {
+	padding: 5px;
+	border: 1px solid #CCCCCC; 
+	height: 300px;
+	margin: 15px 0px 15px 5px;		
+	border-radius: 5px;
+}
+
+#opcionesHomePage{
+	padding: 5px;
+	border: 1px solid #CCCCCC;
+	height: 100px; 
+	margin: 15px 5px 15px 0px;	
+	border-radius: 5px;
+	
 }
 
 #menu {
@@ -83,12 +108,7 @@ body {
 	background: #fff;
 }
 
-#footer {
-	background:#fff;
-	border:none;
-	margin-top:15px;
-	border-top:1px solid #999999;
-}
+
 
 #footer .new {
 	float:left;
@@ -191,12 +211,17 @@ a img {
 	vertical-align: middle;
 }
 
-tr:nth-child(odd) {
-	background-color: #FFFFFF;
+.tablaListado{
+	
 }
 
-tr:nth-child(even) {
-	background-color: #EFEFEF;
+
+.tablaListado tr:nth-child(odd) {
+	height: 30px;
+}
+
+.tablaListado tr:nth-child(even) {
+	height: 30px;
 }
 
 a:link {
@@ -227,10 +252,9 @@ ul li {
 /* table elements */
 
 table {
-	background: #EEEEEE;
+	
 	margin: 2px 0 0 0;
-	border: 1px solid #BBBBBB;
-	border-collapse: collapse;
+	
 	width: 100%
 }
 
@@ -240,10 +264,6 @@ table table {
 	width: 100%;
 }
 
-table td,table th {
-	padding: 2px;
-	border: 1px solid #CCCCCC;
-}
 
 table td form {
 	text-align:center;
@@ -252,11 +272,13 @@ table td form {
 }
 
 table th {
-	font-size: 0.9em;
-	text-align: left;
-	font-weight: bold;
-	color: #FFF;
-	background: #999;
+	background-color: #1A1A1A;
+    border-color: #534C45 #1C1C1C #534C45 #534C45;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    color: #FFFFFF;
 }
 
 table thead {
@@ -370,4 +392,22 @@ fieldset th {
 .flag {
 	height: 11px;
 	width: 16px;
+}
+
+#cuadroInscripcionesPortada{
+	border: 1px solid #CCCCCC;
+	padding: 10px;	
+	background-color: #FFFFFF;
+}
+
+#footer {
+    background: none repeat scroll 0 0 #1A1A1A;
+    border-top: 1px solid #484848;
+    margin-top: 75px;
+    padding-top: 1px;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 12px;
 }

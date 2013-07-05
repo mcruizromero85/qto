@@ -3,8 +3,8 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_qto_web_domain_Enrollment" object="${enrollment}" path="/enrollments" z="UVsnL8eFQ5GOTKiAgGFlhf4c/is=">
-        <field:display field="competitor" id="s_com_qto_web_domain_Enrollment_competitor" object="${enrollment}" z="aBetS12hELKfAiEi9X9n+Eba8nA="/>
         <field:display field="tournament" id="s_com_qto_web_domain_Enrollment_tournament" object="${enrollment}" z="AvNPFY2svj5/1t5lzK0VGCp/wrc="/>
         <field:display calendar="true" dateTimePattern="${enrollment_registrationdate_date_format}" field="registrationDate" id="s_com_qto_web_domain_Enrollment_registrationDate" object="${enrollment}" z="Fy1vh4mrut5nnIl7STL2RYnJO9c="/>
+        <field:display field="gamer" id="s_com_qto_web_domain_Enrollment_gamer" object="${enrollment}" z="m+kKYmUXtOUgiAK6jd6Sda7xGzg="/>
     </page:show>
 </div>

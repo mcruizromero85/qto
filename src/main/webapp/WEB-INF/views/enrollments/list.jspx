@@ -4,9 +4,9 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_com_qto_web_domain_Enrollment" items="${enrollments}" z="ekJ2q6lZCPLUtwzQsEhA60r+C2c=">
         <table:table data="${enrollments}" id="l_com_qto_web_domain_Enrollment" path="/enrollments" z="uSvxP1SEtNSBGRQ/KEbcJ//0hbs=">
-            <table:column id="c_com_qto_web_domain_Enrollment_competitor" property="competitor" z="J3fc0nLIB/IioUSlpvOLBLhvgFo="/>
             <table:column id="c_com_qto_web_domain_Enrollment_tournament" property="tournament" z="+rlYkFkp6hOeTyDi8HIiyYA4JsQ="/>
             <table:column calendar="true" dateTimePattern="${enrollment_registrationdate_date_format}" id="c_com_qto_web_domain_Enrollment_registrationDate" property="registrationDate" z="NFTSgWMZbv4dfAXmYUExvIOI1HE="/>
+            <table:column id="c_com_qto_web_domain_Enrollment_gamer" property="gamer" z="bMqymASgbAyGJJuI9Y2wsSDv2cs="/>
         </table:table>
     </page:list>
 </div>

@@ -47,6 +47,8 @@ public class Steps
 			e.printStackTrace();
 		}
 	}
+	
+	
 
 	@Then("I should see input hidden for Test \"$text\"")
 	public void iShouldSeeInputHiddenForTest(String text){
@@ -84,15 +86,25 @@ public class Steps
 	public void iShouldNotSeeButtonWithTheFollowingText(String text){
 		home.buttonIsNotVisible(text);
 	}
+	
+	@Then("I press button \"$text\" to \"$text2\" tournament")
+	public void iPressButtonToTournament(String text, String text2){
+		home.click(text2);		
+	}
+	
+	@Then("I press button \"$text\"")
+	public void iPressButton(String text){
+		home.clickButton(text);		
+	}
+	
+	@Then("I press link \"$text\"")
+	public void iPressLink(String text){
+		home.click(text);
+	}
+	
 
 	@When("I click button \"$text\"")
 	public void iClickButton(String text){
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	
 		home.clickButton(text);
 	}
 
@@ -119,7 +131,9 @@ public class Steps
 	public void iShouldSeeUserWithEntryHourAndStatus(String user,String hour, String status){
 		home.textIsVisible(user);
 		home.textIsVisible(hour);
-		home.textIsVisible(status);		
+		home.textIsVisible(status);	
+		
+		
 	}
 
 

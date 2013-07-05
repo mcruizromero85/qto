@@ -10,12 +10,12 @@ import java.util.Calendar;
 
 privileged aspect Enrollment_Roo_JavaBean {
     
-    public Gamer Enrollment.getCompetitor() {
-        return this.competitor;
+    public Gamer Enrollment.getGamer() {
+        return this.gamer;
     }
     
-    public void Enrollment.setCompetitor(Gamer competitor) {
-        this.competitor = competitor;
+    public void Enrollment.setGamer(Gamer gamer) {
+        this.gamer = gamer;
     }
     
     public Tournament Enrollment.getTournament() {
